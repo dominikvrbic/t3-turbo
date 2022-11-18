@@ -6,7 +6,6 @@
     "db-generate": "turbo db-generate",
     "db-push": "turbo db-push",
     "build": "turbo build",
-    "postinstall": "pnpm db-generate && db-push",
     "dev": "turbo dev --parallel",
     "clean:workspaces": "turbo clean",
     "clean": "rm -rf node_modules",
