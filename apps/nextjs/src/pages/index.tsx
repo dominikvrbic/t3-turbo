@@ -34,7 +34,7 @@ const Home: NextPage = () => {
             Create <span className="text-[hsl(280,100%,70%)]">T3</span> Turbo
           </h1>
           <AuthShowcase />
-          <div className="uppercase">title</div>
+          <div className="uppercase bg-slate-300">title</div>
 
           <div className="flex justify-center px-4 text-2xl overflow-y-scroll h-[60vh]">
             {postQuery.data ? (
