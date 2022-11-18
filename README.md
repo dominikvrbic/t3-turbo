@@ -15,11 +15,6 @@ It uses [Turborepo](https://turborepo.org/) and contains:
 .vscode
   └─ Recommended extensions and settings for VSCode users
 apps
-  ├─ expo
-  |   ├─ Expo SDK 46
-  |   ├─ React Native using React 18
-  |   ├─ Tailwind using Nativewind
-  |   └─ Typesafe API calls using tRPC
   └─ next.js
       ├─ Next.js 13
       ├─ React 18
@@ -29,7 +24,7 @@ packages
  ├─ api
  |   └─ tRPC v10 router definition
  ├─ auth
-     └─ authentication using next-auth. **NOTE: Only for Next.js app, not Expo**
+     └─ authentication using next-auth. **NOTE: Only for Next.js app,
  └─ db
      └─ typesafe db-calls using Prisma
 ```
@@ -57,31 +52,6 @@ cp .env.example .env
 pnpm db-push
 ```
 
-### Configure Expo `dev`-script
-
-> **Note:** If you want to use a physical phone with Expo Go, just run `pnpm dev` and scan the QR-code.
-
-#### Use iOS Simulator
-
-1. Make sure you have XCode and XCommand Line Tools installed [as shown on expo docs](https://docs.expo.dev/workflow/ios-simulator/).
-2. Change the `dev` script at `apps/expo/package.json` to open the iOS simulator.
-
-```diff
-+  "dev": "expo start --ios",
-```
-
-3. Run `pnpm dev` at the project root folder.
-
-#### For Android
-
-1. Install Android Studio tools [as shown on expo docs](https://docs.expo.dev/workflow/android-studio-emulator/).
-2. Change the `dev` script at `apps/expo/package.json` to open the Android emulator.
-
-```diff
-+  "dev": "expo start --android",
-```
-
-3. Run `pnpm dev` at the project root folder.
 
 ## Deployment
 
