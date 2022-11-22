@@ -11,7 +11,17 @@ on:
 
 jobs:
   build-lint:
+    env:
+      DATABASE_URL: postgresql://postgres:@localhost:5835/t3
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12.1
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: t3
+        ports:
+          - 5835:5432
 
     steps:
       - name: Checkout repo
