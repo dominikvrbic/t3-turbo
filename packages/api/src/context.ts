@@ -27,8 +27,8 @@ export const createContextInner = async (opts: CreateContextOptions) => {
  * This is the actual context you'll use in your router
  * @link https://trpc.io/docs/context
  **/
-export const createContext = async (opts: CreateNextContextOptions) => {
-  const session = await getServerSession(opts);
+export const createContext = async (opts?: CreateNextContextOptions) => {
+  const session = await (opts ? getServerSession(opts) : null);
 
   return await createContextInner({
     session,

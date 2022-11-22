@@ -5,7 +5,7 @@ import { AppRouter, appRouter } from '.';
 import { createContext } from '../context';
 
 test('add and get post', async () => {
-  const ctx = await createContext({} as any);
+  const ctx = await createContext();
   const postCaller = appRouter.post.createCaller(ctx);
 
   const input: inferProcedureInput<AppRouter['post']['create']> = {
