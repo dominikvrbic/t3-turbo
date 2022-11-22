@@ -11,8 +11,6 @@ on:
 
 jobs:
   build-lint:
-    env:
-      DATABASE_URL: file:./db.sqlite
     runs-on: ubuntu-latest
 
     steps:
@@ -41,7 +39,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install deps (with cache)
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
       - name: Next.js cache
         uses: actions/cache@v3
