@@ -52,7 +52,6 @@ cp .env.example .env
 pnpm db-push
 ```
 
-
 ## Deployment
 
 ### Next.js

@@ -1,9 +1,11 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { signIn, signOut } from 'next-auth/react';
-import { trpc } from '../utils/trpc';
 import type { inferProcedureOutput } from '@trpc/server';
-import type { AppRouter } from '@acme/api';
+import type { NextPage } from 'next';
+import { signIn, signOut } from 'next-auth/react';
+import Head from 'next/head';
+
+import type { AppRouter } from '@test/api';
+
+import { trpc } from '@utils';
 
 const PostCard: React.FC<{
   post: inferProcedureOutput<AppRouter['post']['all']>[number];
@@ -19,8 +21,7 @@ const PostCard: React.FC<{
 };
 
 const Home: NextPage = () => {
-  const postQuery = trpc.post.all.useQuery();
-
+  const { data } = trpc.post.all.useQuery();
   return (
     <>
       <Head>
@@ -34,12 +35,11 @@ const Home: NextPage = () => {
             Create <span className="text-[hsl(280,100%,70%)]">T3</span> Turbo
           </h1>
           <AuthShowcase />
-          <div className="uppercase bg-slate-300">title</div>
 
-          <div className="flex justify-center px-4 text-2xl overflow-y-scroll h-[60vh]">
-            {postQuery.data ? (
+          <div className="flex justify-center px-4 text-2xl ">
+            {data ? (
               <div className="flex flex-col gap-4">
-                {postQuery.data?.map((p) => {
+                {data?.map((p) => {
                   return <PostCard key={p.id} post={p} />;
                 })}
               </div>

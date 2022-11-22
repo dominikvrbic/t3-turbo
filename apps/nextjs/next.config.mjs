@@ -3,7 +3,7 @@
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
  */
-!process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
+!process.env.SKIP_ENV_VALIDATION && (await import('./src/env/server.mjs'));
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -11,7 +11,7 @@ const config = {
   swcMinify: true,
   experimental: {
     // Enables hot-reload and easy integration for local packages
-    transpilePackages: ["@acme/api", "@acme/auth", "@acme/db"],
+    transpilePackages: ['@test/api', '@test/auth', '@test/db'],
   },
   // We already do linting on GH actions
   eslint: {

@@ -1,7 +1,8 @@
-import { getServerSession, type Session } from "@acme/auth";
-import { prisma } from "@acme/db";
-import { type inferAsyncReturnType } from "@trpc/server";
-import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import { type inferAsyncReturnType } from '@trpc/server';
+import { type CreateNextContextOptions } from '@trpc/server/adapters/next';
+
+import { getServerSession, type Session } from '@test/auth';
+import { prisma } from '@test/db';
 
 /**
  * Replace this with an object if you want to pass things to createContextInner
