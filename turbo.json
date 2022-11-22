@@ -17,6 +17,10 @@
       "dependsOn": ["^build", "^db-generate"],
       "outputs": [".next/**"]
     },
+    "test": {
+      "dependsOn": ["^build", "^db-generate"],
+      "outputs": ["coverage/**"]
+    },
     "lint": {
       "outputs": []
     },
