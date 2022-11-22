@@ -75,8 +75,8 @@ importers:
     specifiers:
       '@test/auth': '*'
       '@test/db': '*'
-      '@trpc/client': 10.0.0-rc.4
-      '@trpc/server': 10.0.0-rc.4
+      '@trpc/client': 10.0.0
+      '@trpc/server': 10.0.0
       '@vitejs/plugin-react': ^2.2.0
       jsdom: ^20.0.3
       superjson: ^1.9.1
@@ -87,8 +87,8 @@ importers:
     dependencies:
       '@test/auth': link:../auth
       '@test/db': link:../db
-      '@trpc/client': 10.0.0-rc.4_@trpc+server@10.0.0-rc.4
-      '@trpc/server': 10.0.0-rc.4
+      '@trpc/client': 10.0.0_@trpc+server@10.0.0
+      '@trpc/server': 10.0.0
       superjson: 1.11.0
       zod: 3.19.1
     devDependencies:
@@ -859,14 +859,6 @@ packages:
       - supports-color
     dev: false
 
-  /@trpc/client/10.0.0-rc.4_@trpc+server@10.0.0-rc.4:
-    resolution: {integrity: sha512-kzyDnFjBaNz/bL/Fir0jr1NgPoZ4Leho5NttAa3Xgml4tMV874LNrCeBbXf6GGU8bjeqTc2XarfnDcJokw2CXg==}
-    peerDependencies:
-      '@trpc/server': 10.0.0-rc.4
-    dependencies:
-      '@trpc/server': 10.0.0-rc.4
-    dev: false
-
   /@trpc/client/10.0.0_@trpc+server@10.0.0:
     resolution: {integrity: sha512-qxYbpFvokyL0SHSck/roBvG5/tORm+jTqzr+hnwyCghE4MQ0EGoyBImgdgUDAkTEjdarYTy1I3YplUw48QF4gQ==}
     peerDependencies:
@@ -914,10 +906,6 @@ packages:
 
   /@trpc/server/10.0.0:
     resolution: {integrity: sha512-PnSlKM3WtguEb1hryekuVlR00QOR8nbFKuZbuLbzfkLju+xOB+F3NplWW5YMVBywWdJKasX/inQDKur2SHyPfg==}
-    dev: false
-
-  /@trpc/server/10.0.0-rc.4:
-    resolution: {integrity: sha512-svW7FcjoWv4AXPjF0Kyf4c3zGuav/GwzfyldZyQh+qQ5fEHBRe69aNNpifbykuxv4svV8daQtTYqW/PsItO7FQ==}
     dev: false
 
   /@types/chai-subset/1.3.3:
