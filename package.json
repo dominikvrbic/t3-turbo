@@ -1,5 +1,5 @@
 {
-  "name": "create-t3-turbo",
+  "name": "dominik-t3-turbo",
   "private": true,
   "packageManager": "pnpm@7.13.0",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@manypkg/cli": "^0.19.2",
-    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "prettier": "^2.7.1",
     "turbo": "^1.6.3"
   }
