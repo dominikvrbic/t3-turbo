@@ -1,6 +1,6 @@
+import { postRouter } from '../post/router';
 import { router } from '../trpc';
 import { authRouter } from './auth';
-import { postRouter } from './post';
 
 export const appRouter = router({
   post: postRouter,
