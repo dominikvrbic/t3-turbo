@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { router, publicProcedure, protectedProcedure } from '../trpc';
+import { publicProcedure, protectedProcedure } from '../auth';
+import { router } from '../trpc';
 import { PostService } from './service';
 
 export const postRouter = router({
