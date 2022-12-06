@@ -62,3 +62,6 @@ jobs:
 
       - name: Check workspaces
         run: pnpm manypkg check
+
+      - name: Run tests
+        run: pnpm turbo test
