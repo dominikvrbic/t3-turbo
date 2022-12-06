@@ -7,6 +7,7 @@ import { authRouter } from './router';
 
 beforeAll(async () => {
   const ctx = await createContext();
+  await ctx.prisma.user.deleteMany();
   await ctx.prisma.user.create({
     data: {
       name: 'test',
