@@ -24,8 +24,5 @@
     "turbo": "^1.6.3",
     "vite": "^3.2.4",
     "vitest": "^0.25.3"
-  },
-  "peerDependencies": {
-    "@vue/compiler-sfc": "^3.2.26"
   }
 }
